@@ -2,7 +2,7 @@
   "name": "markdown-multi-preview",
   "displayName": "Markdown Multi Preview",
   "description": "Preview multiple Markdown files simultaneously in independent webview panels with syntax highlighting",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "publisher": "mysticmilan369",
   "author": {
     "name": "Mystic Milan"
@@ -16,6 +16,7 @@
     "url": "https://github.com/mysticmilan369/markdown-multi-preview/issues"
   },
   "homepage": "https://github.com/mysticmilan369/markdown-multi-preview#readme",
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.107.0"
   },
@@ -39,7 +40,8 @@
     "commands": [
       {
         "command": "markdown-multi-preview.openPreview",
-        "title": "Markdown Multi Preview: Open Preview"
+        "title": "Markdown Multi Preview: Open Preview",
+        "icon": "$(preview)"
       }
     ],
     "keybindings": [
@@ -59,6 +61,19 @@
           "minimum": 10,
           "maximum": 32,
           "description": "Font size for the Markdown preview (in pixels)"
+        },
+        "markdownMultiPreview.tocPosition": {
+          "type": "string",
+          "default": "right",
+          "enum": [
+            "left",
+            "right"
+          ],
+          "enumDescriptions": [
+            "Display table of contents on the left side",
+            "Display table of contents on the right side"
+          ],
+          "description": "Default position of the Table of Contents sidebar"
         }
       }
     }
